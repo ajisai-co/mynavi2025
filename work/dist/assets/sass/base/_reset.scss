@@ -25,6 +25,10 @@ time, mark, audio, video {
   @include fonts.base-font;
 }
 
+body {
+  background: #F0F2F2;
+}
+
 a{
   color: setting.$textColor;
   outline:none;
