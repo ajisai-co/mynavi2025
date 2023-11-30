@@ -17,9 +17,7 @@ body {
 }
 
 
-@function calcResp($n) {
-	@return calc($n * 100vw / 375);
-}
+
 @function calcPc($n) {
 	@return calc($n * 100vw / 1280);
 }

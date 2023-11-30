@@ -61,9 +61,19 @@ const browserSyncOption = {
 
 sass.compiler = require("sass"); 
 
-gulp.task("sass", () => {
+gulp.task("sass_pc", () => {
   return gulp
-    .src("./assets/sass/style.scss")
+    .src("./assets/sass/style_pc.scss")
+    .pipe(sass())
+    .pipe(postcss(postcssOption))
+    // キリカエ
+    .pipe(gulp.dest("../public/css/"));
+    // .pipe(gulp.dest("../wp/assets/css/"));
+});
+
+gulp.task("sass_sp", () => {
+  return gulp
+    .src("./assets/sass/style_sp.scss")
     .pipe(sass())
     .pipe(postcss(postcssOption))
     // キリカエ
@@ -120,7 +130,9 @@ gulp.task("watch", () => {
   gulp.watch("ejs/**/*.ejs", browserReload);
   gulp.watch("assets/js/*.js", gulp.series("js"));
   gulp.watch("assets/js/*.js", browserReload);
-  gulp.watch("assets/sass/**/*.scss", gulp.series("sass"));
+  gulp.watch("assets/sass/**/*.scss", gulp.series("sass_pc"));
+  gulp.watch("assets/sass/**/*.scss", browserReload);
+  gulp.watch("assets/sass/**/*.scss", gulp.series("sass_sp"));
   gulp.watch("assets/sass/**/*.scss", browserReload);
 });
 

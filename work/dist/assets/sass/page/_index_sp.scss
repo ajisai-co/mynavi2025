@@ -1,0 +1,264 @@
+@use "../base/mediaquery";
+
+@function calcResp($n) {
+	@return calc($n * 100vw / 375);
+}
+
+@include mediaquery.sp {
+    @keyframes hover {
+        0% { transform: translateY(-3%); }
+        50% { transform: translateY(3%); }
+        100% { transform: translateY(-3%); }
+    }
+    .u-device-sp{
+        display: block;
+    }
+    .u-device-pc{
+        display: none;
+    }
+    .front {
+        margin: 0 0 calcResp(148);
+        padding: 0 calcResp(24);
+        &__txt {
+            padding-top: calcResp(90);
+            h1 {
+                margin: 0 0 calcResp(140);
+                img {
+                    width: 100%;
+                    max-width: 100%;
+                }
+            }
+            p {
+                padding: 0 calcResp(14);
+                font-size: calcResp(15);
+                line-height: 1.87;
+                font-weight: bold;
+                span {
+                    font-size: calcResp(15);
+                    line-height: 1.87;
+                }
+            }
+        }
+        &__illust {
+            &:nth-child(2) {
+                top: calcResp(68);
+                left: calcResp(14);
+                width: calcResp(58);
+                height: calcResp(60);
+                animation: fadeIn 1s ease-in-out, hover 4s infinite;
+            }
+            &:nth-child(3) {
+                top: calcResp(42);
+                right: calcResp(14);
+                width: calcResp(35);
+                height: calcResp(39);
+                animation: fadeIn 1s ease-in-out, hover 3.8s infinite;
+            }
+            &:nth-child(4) {
+                top: calcResp(300);
+                left: calc(-1 * calcResp(252));
+                width: calcResp(400);
+                height: calcResp(366);
+                animation: fadeIn 1s ease-in-out, hover 3s infinite;
+            }
+            &:nth-child(5) {
+                top: calcResp(263);
+                right: calcResp(8);
+                width: calcResp(113);
+                height: calcResp(122);
+                animation: fadeIn 1s ease-in-out, hover 3.5s infinite;
+            }
+        }
+    }
+    .content {
+        overflow: hidden;
+        padding-bottom: calcResp(24);
+        &__head {
+            font-size: 2.2rem;
+            line-height: 1.8;
+        }
+        &__thumb {
+            width: 60%;
+            .head {
+                font-size: 2rem;
+                span {
+                    font-size: 2rem;
+                }
+            }
+            .swiper-wrapper {
+            }
+            .swiper-slide {
+                &:nth-child(1),
+                &:nth-child(2),
+                &:nth-child(3) {
+                    width: 100%;
+                }
+                &:nth-child(4) {
+                    width: 100%;
+                }
+                &.-modifier {
+                    max-height: 260px;
+                }
+            }
+        }
+        &__body {
+            width: 100%;
+            padding: 0 !important;
+            .head {
+                margin: 0 0 calcResp(32);
+                h3 {
+                    font-size: calcResp(26);
+                    span {
+                        font-size: calcResp(26);
+                    }
+                }
+            }
+            .swiper-button-prev,
+            .swiper-button-next {
+                width: calcResp(50);
+                height: calcResp(50);
+                top: 11.5%;
+            }
+            .swiper-button-prev {
+                left: calcResp(-16);
+            }
+            .swiper-button-next {
+                right: calcResp(-16);
+            }
+            .swiper-slide {
+                .inner {
+                    padding: calcResp(80) calcResp(16);
+                }
+                &:nth-child(1), 
+                &:nth-child(2), 
+                &:nth-child(3) {
+                    .intro {
+                        margin: 0 0 calcResp(32);
+                        .img {
+                            margin: 0 0 calcResp(20);
+                        }
+                        .txt {
+                            margin: 0;
+                            width: 100%;
+                            font-size: calcResp(15);
+                        }
+                    }
+                }
+                .box {
+                    width: 100%;
+                    padding: calcResp(40) calcResp(24) calcResp(46);
+                    &__head {
+                        font-size: calcResp(15);
+                        padding: 8px 16px;
+                        margin: 0 0 calcResp(32);
+                    }
+                    &__lead {
+                        font-size: calcResp(22);
+                        line-height: 1.55;
+                        margin: 0 0 calcResp(40);
+                    }
+                    &__btn {
+                        a {
+                            font-size: calcResp(15);
+                            padding: calcResp(16) calcResp(32);
+                            span {
+                                font-size: calcResp(15);
+                            }
+                        }
+                        &.-modifier {
+                            & + .box__btn {
+                                margin: calcResp(16) 0 0;
+                            }
+                        }
+                    }
+                    &__action {
+                        max-width: 100%;
+                        .icon {
+                            padding: 4px 8px;
+                            margin: 0 0 10px;
+                            font-size: 1.1rem;
+                            width: auto;
+                        }
+                        .txt {
+                            font-size: calcResp(22);
+                            text-align: left;
+                            line-height: 1.55;
+                        }
+                        & + .box__frame {
+                            margin-top: calcResp(24);
+                        }
+                    }
+                    &__frame {
+                        max-width: 100%;
+                        padding: calcResp(20) calcResp(10);
+                        .head {
+                            font-size: 1.4rem;
+                            margin: 0 0 calcResp(20);
+                        }
+                        .column {
+                            img {
+                                width: calcResp(12);
+                                height: calcResp(9.5);
+                            }
+                            p {
+                                font-size: calcResp(15);
+                                text-align: left;
+                                line-height: 1.875;
+                            }
+                            a {
+                                font-size: calcResp(15);
+                                line-height: 1.875;
+                                &::after {
+                                    width: calc(100% - calcResp(20) - 10px);
+                                    bottom: 0;
+                                }
+                                img {
+                                    width: calcResp(20);
+                                    height: calcResp(22);
+                                }
+                            }
+                            & + .column {
+                                margin-top: calcResp(10);
+                            }
+                        }
+                        & + .box__action {
+                            margin-top: calcResp(28);
+                        }
+                    }
+                    & + .box {
+                        margin-top: calcResp(16);
+                    }
+                    & + .link {
+                        margin-top: calcResp(72);
+                    }
+                }
+                .link {
+                    a {
+                        span {
+                            font-size: calcResp(18);
+                            line-height: 2;
+                            &:nth-child(1) {
+                                &::after {
+                                    bottom: 0;
+                                }
+                            }
+                            &:nth-child(2) {
+                                &::after {
+                                    left: 0;
+                                    bottom: 0;
+                                    width: 100%;
+                                }
+                            }
+                        }
+                        &::after {
+                            right: calcResp(-28);
+                            bottom: 0;
+                            width: calcResp(20);
+                            height: calcResp(22);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
