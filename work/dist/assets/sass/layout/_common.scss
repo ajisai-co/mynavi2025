@@ -21,7 +21,7 @@ body {
 	@return calc($n * 100vw / 375);
 }
 @function calcPc($n) {
-	@return min(calc($n * 100vw / 1366), $n);
+	@return calc($n * 100vw / 1280);
 }
 
 .dev-sitemap{
