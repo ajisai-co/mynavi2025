@@ -31,6 +31,7 @@
             font-size: 1.8rem;
             color: #fff;
             line-height: 1.78;
+            font-weight: 100;
             span {
                 display: block;
                 @include fonts.Noto-Sans;
@@ -56,6 +57,7 @@
         margin: 0 0 32px;
     }
     &__thumb {
+        position: relative;
         text-align: center;
         margin: 0 auto 48px;
         max-width: 940px;
@@ -78,7 +80,6 @@
                 width: 80px;
                 height: auto;
                 background: url("images/thumb04.webp") no-repeat center/contain;
-
             }
             &:nth-child(1) {
                 time {
@@ -264,7 +265,7 @@
             position: absolute;
             height: 80px;
             width: 80px;
-            top: 84px;
+            top: 205px;
         }
         /* 前へ次への矢印カスタマイズ */
         .swiper-button-prev::after,
@@ -574,7 +575,7 @@
 @include mediaquery.sp {
     .front {
         margin: 0 0 common.calcResp(148);
-        padding: 0 24px;
+        padding: 0 common.calcResp(24);
         &__txt {
             padding-top: common.calcResp(90);
             h1 {
@@ -585,11 +586,18 @@
                 }
             }
             p {
-                padding: 0 16px;
+                padding: 0 common.calcResp(14);
+                font-size: common.calcResp(15);
+                line-height: 1.87;
+                span {
+                    font-size: common.calcResp(15);
+                    line-height: 1.87;
+                }
             }
         }
     }
     .content {
+        padding-bottom: common.calcResp(24);
         &__head {
             font-size: 2.2rem;
             line-height: 1.8;
@@ -600,42 +608,73 @@
                 span {
                     font-size: 2rem;
                 }
-            }   
+            }
+            .more {
+                display: none;
+            }
         }
         &__body {
             width: 100%;
             padding: 0 !important;
+            .head {
+                margin: 0 0 common.calcResp(32);
+                h3 {
+                    font-size: common.calcResp(26);
+                    span {
+                        font-size: common.calcResp(26);
+                    }
+                }
+            }
+
+            .swiper-button-prev,
+            .swiper-button-next {
+                width: common.calcResp(50);
+                height: common.calcResp(50);
+                top: 11.5%;
+            }
+            .swiper-button-prev {
+                left: common.calcResp(-16);
+            }
+            .swiper-button-next {
+                right: common.calcResp(-16);
+            }
             .swiper-slide {
-                padding: 80px 16px;
+                padding: common.calcResp(80) common.calcResp(16);
                 &:nth-child(1), 
                 &:nth-child(2), 
                 &:nth-child(3) {
                     .intro {
-                        margin: 0 0 common.calcResp(40);
+                        margin: 0 0 common.calcResp(32);
                         .img {
                             margin: 0 0 common.calcResp(20);
                         }
                         .txt {
                             margin: 0;
+                            width: 100%;
+                            font-size: common.calcResp(15);
                         }
                     }
-                } 
+                }
                 .box {
                     width: 100%;
-                    padding: common.calcResp(40) common.calcResp(24);
+                    padding: common.calcResp(40) common.calcResp(24) common.calcResp(46);
                     &__head {
-                        font-size: 1.5rem;
+                        font-size: common.calcResp(15);
                         padding: 8px 16px;
                         margin: 0 0 common.calcResp(32);
                     }
                     &__lead {
-                        font-size: 2.2rem;
+                        font-size: common.calcResp(22);
                         line-height: 1.55;
                         margin: 0 0 common.calcResp(40);
                     }
                     &__btn {
                         a {
+                            font-size: common.calcResp(15);
                             padding: common.calcResp(16) common.calcResp(32);
+                            span {
+                                font-size: common.calcResp(15);
+                            }
                         }
                     }
                     &__action {
@@ -647,30 +686,33 @@
                             width: auto;
                         }
                         .txt {
-                            font-size: 2.2rem;
+                            font-size: common.calcResp(22);
                             text-align: left;
                             line-height: 1.55;
+                        }
+                        & + .box__frame {
+                            margin-top: common.calcResp(24);
                         }
                     }
                     &__frame {
                         max-width: 100%;
-                        padding: common.calcResp(32) common.calcResp(10);
+                        padding: common.calcResp(20) common.calcResp(10);
                         .head {
                             font-size: 1.4rem;
                             margin: 0 0 common.calcResp(20);
                         }
                         .column {
                             img {
-                                width: 12px;
-                                height: 9.5px;
+                                width: common.calcResp(12);
+                                height: common.calcResp(9.5);
                             }
                             p {
-                                font-size: 1.5rem;
+                                font-size: common.calcResp(15);
                                 text-align: left;
                                 line-height: 1.875;
                             }
                             a {
-                                font-size: 1.5rem;
+                                font-size: common.calcResp(15);
                                 line-height: 1.875;
                                 &::after {
                                     width: calc(100% - common.calcResp(20) - 10px);
@@ -682,11 +724,43 @@
                                 }
                             }
                             & + .column {
-                                margin-top: 24px;
+                                margin-top: common.calcResp(10);
                             }
                         }
                         & + .box__action {
-                            margin-top: 60px;
+                            margin-top: common.calcResp(28);
+                        }
+                    }
+                    & + .box {
+                        margin-top: common.calcResp(16);
+                    }
+                    & + .link {
+                        margin-top: common.calcResp(72);
+                    }
+                }
+                .link {
+                    a {
+                        span {
+                            font-size: common.calcResp(18);
+                            line-height: 2;
+                            &:nth-child(1) {
+                                &::after {
+                                    bottom: 0;
+                                }
+                            }
+                            &:nth-child(2) {
+                                &::after {
+                                    left: 0;
+                                    bottom: 0;
+                                    width: 100%;
+                                }
+                            }
+                        }
+                        &::after {
+                            right: common.calcResp(-28);
+                            bottom: 0;
+                            width: common.calcResp(20);
+                            height: common.calcResp(22);
                         }
                     }
                 }
