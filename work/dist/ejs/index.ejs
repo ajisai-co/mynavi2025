@@ -1,5 +1,22 @@
 <%- include('parts/_header'); %>
-<main role="main" class="l-common">
+<main id="main" role="main" class="l-common">
+<!-- ▼パンくず・構造化 start -->
+<!-- <?php //パンクズが一つの場合 -->
+<!-- if(function_exists('pc_pankuzu_set')){ print pc_pankuzu_set(array( -->
+<!-- array('/conts/2025/yoyakulist/','就活準備ラストスパート')));} ?> -->
+<!-- ▲／パンくず・構造化 end -->
+
+	<!-- ▼コンテンツ本文ここから start -->
+
+<!-- ▼パンくず・プリントボタン start -->
+<!-- <div id="topicpathArea">
+     <ul class="topicpath">
+     <li><a href="/2025/">トップ</a></li>
+     <li>タイトルタイトル</li>
+     </ul>
+     /#topicpathArea
+</div> -->
+<!-- ▲／パンくず・プリントボタン end -->
 
      <section class="front">
           <div class="front__bg">
@@ -200,3 +217,4 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script type="text/javascript" src="js/init.js"></script>z
 </body>
+<%- include('parts/_footer'); %>

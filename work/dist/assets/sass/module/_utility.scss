@@ -2,4 +2,13 @@
 
 .u-device-sp{
 	display: none;
+	@include mediaquery.sp {
+		display: block;
+	}
+}
+
+.u-device-pc{
+	@include mediaquery.sp {
+		display: none;
+	}
 }
