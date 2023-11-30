@@ -403,7 +403,7 @@
                 margin: 0 auto 40px;
                 border-radius: 80px;
                 background: #009CEB;
-                padding: 6px 24px;
+                padding: 6px 24px 8px;
                 color: #fff;
                 font-size: 2rem;
                 font-weight: bold;
@@ -416,6 +416,7 @@
                 letter-spacing: .04em;
                 @include fonts.Noto-Sans;
                 margin: 0 0 40px;
+                font-weight: 500;
                 span {
                     display: block;
                     font-size: 4rem;
@@ -503,6 +504,7 @@
                 flex-wrap: wrap;
                 .icon {
                     width: 100px;
+                    padding: 4px 10px 6px;
                     color: #fff;
                     font-weight: bold;
                     font-size: 1.4rem;
