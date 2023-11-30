@@ -74,13 +74,25 @@
             height: auto;
             max-width: 220px;
             box-sizing: border-box;
+            &::before {
+                content: "";
+                width: 80px;
+                height: 28px;
+                background: url("../images/arrow_blue.webp") no-repeat center/contain;
+                position: absolute;
+                top: 96px;
+                left: -54px;
+            }
             &::after {
                 content: "";
                 width: 80px;
                 height: auto;
-                background: url("images/thumb04.webp") no-repeat center/contain;
+                background: url("../images/thumb04.webp") no-repeat center/contain;
             }
             &:nth-child(1) {
+                &::before {
+                    content: none;
+                }
                 time {
                     transform: translateX(3%);
                     img {
@@ -220,6 +232,7 @@
             height: auto;
             z-index: 10;
             .inner {
+                position: relative;
                 height: auto;
                 padding: 80px 20px 108px;
                 background: #fff;
@@ -359,10 +372,18 @@
                 letter-spacing: .04em;
                 @include fonts.Noto-Sans;
                 margin: 0 0 40px;
+                span {
+                    display: block;
+                    font-size: 4rem;
+                    font-weight: 100;
+                    letter-spacing: .04em;
+                    @include fonts.Noto-Sans;
+                }
             }
             &__btnwrapper {
                 display: flex;
                 justify-content: center;
+                flex-wrap: wrap;
             }
             &__btn {
                 position: relative;
@@ -444,6 +465,7 @@
                     @include fonts.Noto-Sans;
                     background: #009CEB;
                     border-radius: 4px;
+                    margin-right: 24px;
                 }
                 .txt {
                     font-weight: 100;
@@ -642,7 +664,9 @@
                 right: common.calcResp(-16);
             }
             .swiper-slide {
-                padding: common.calcResp(80) common.calcResp(16);
+                .inner {
+                    padding: common.calcResp(80) common.calcResp(16);
+                }
                 &:nth-child(1), 
                 &:nth-child(2), 
                 &:nth-child(3) {
@@ -677,6 +701,11 @@
                             padding: common.calcResp(16) common.calcResp(32);
                             span {
                                 font-size: common.calcResp(15);
+                            }
+                        }
+                        &.-modifier {
+                            & + .box__btn {
+                                margin: common.calcResp(16) 0 0;
                             }
                         }
                     }
