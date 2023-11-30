@@ -31,7 +31,6 @@
             font-size: 1.8rem;
             color: #fff;
             line-height: 1.78;
-            font-weight: 100;
             span {
                 display: block;
                 @include fonts.Noto-Sans;
@@ -219,10 +218,13 @@
         }
         .swiper-slide {
             height: auto;
-            padding: 80px 20px 108px;
-            background: #fff;
-            border-radius: 40px;
             z-index: 10;
+            .inner {
+                height: auto;
+                padding: 80px 20px 108px;
+                background: #fff;
+                border-radius: 40px;
+            }
             &:nth-child(1) {
                 .intro {
                     .img {
@@ -589,6 +591,7 @@
                 padding: 0 common.calcResp(14);
                 font-size: common.calcResp(15);
                 line-height: 1.87;
+                font-weight: 100;
                 span {
                     font-size: common.calcResp(15);
                     line-height: 1.87;
