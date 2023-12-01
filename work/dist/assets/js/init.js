@@ -1,17 +1,32 @@
 
 
 document.addEventListener('DOMContentLoaded', function () {
-	gsap.utils.toArray('.js-parallax').forEach(wrap => {
-		const y = wrap.getAttribute('data-y') || -150;
-		gsap.to(wrap, {
-			y: y,
-			scrollTrigger: {
-				trigger: wrap,
-				start: 'top bottom',
-				end: 'bottom center+=100px',
-				scrub: 0.8,
+	gsap.utils.toArray('.js-fadein').forEach(target => {
+		gsap.fromTo(target, {
+			opacity: 0,
+			ease: "power1.inOut",
+			}, {
+				opacity: 1,
+				scrollTrigger: {
+					trigger: target,
+					scrub: 1,
+					start: "top bottom",
+					end: "center center"
+				},
 			}
-		})
+		);
+	});
+	const follower = document.getElementById('js-follow');
+	gsap.to(follower, {
+		scrollTrigger: {
+			trigger: ".js-follow",
+			start: "top 30%",
+			end: "bottom bottom",
+			endTrigger: "#parent",
+			pin: true,
+			scrub: true,
+			markers: true
+		},
 	});
 	var swiper_thumb = new Swiper(".js-thumbSlide", {
 		loop: false,
@@ -28,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	var swiper_main = new Swiper(".js-mainSlide", {
 		effect: 'fade',
 		fadeEffect: {
-		crossFade: true,
+			crossFade: true,
 		},
 		loop: false,
 		speed: 1000,
@@ -42,16 +57,22 @@ document.addEventListener('DOMContentLoaded', function () {
 			nextEl: ".swiper-button-next",
 			prevEl: ".swiper-button-prev",
 		},
-		breakpoints: {
-			769: {
-				spaceBetween: 20,
-				slidesPerView: 1,
-				scrollbar: {
-				dragSize: '267',
-				},
+		on: {
+			slideChangeTransitionEnd: function () {
+			var delayedElement = document.querySelector('.js-mainSlide .swiper-slide-active');
+			gsap.to(delayedElement, { opacity: 1, duration: 1, delay: 0.5 });
 			},
 		},
-	});
+		breakpoints: {
+			769: {
+			spaceBetween: 20,
+			slidesPerView: 1,
+			scrollbar: {
+				dragSize: '267',
+			},
+			},
+		},
+		});
 	swiper_thumb.on('slideChange', function() {
 		swiper_main.slideTo(swiper_thumb.activeIndex);
 	});

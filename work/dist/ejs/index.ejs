@@ -21,36 +21,44 @@
      <section class="front">
           <div class="front__bg">
                <picture>
-                    <source srcset="image/front_bg_pc.webp" media="(min-width:769px)">
-                    <img src="image/front_bg_sp.webp" alt="">
+                    <source srcset="image/front_bg01_pc.webp" media="(min-width:769px)">
+                    <img src="image/front_bg01_sp.webp" alt="">
+               </picture>
+               <picture>
+                    <source srcset="image/front_bg02_pc.webp" media="(min-width:769px)">
+                    <img src="image/front_bg02_sp.webp" alt="">
                </picture>
           </div>
-          <div class="front__illust js-parallax">
+          <div class="front__illust">
                <picture>
                     <source srcset="image/front_illust01_pc.webp" media="(min-width:769px)">
                     <img src="image/front_illust01_sp.webp" alt="">
                </picture>
           </div>
-          <div class="front__illust js-parallax">
+          <div class="front__illust">
                <picture>
                     <source srcset="image/front_illust02_pc.webp" media="(min-width:769px)">
                     <img src="image/front_illust02_sp.webp" alt="">
                </picture>
           </div>
-          <div class="front__illust js-parallax">
+          <div class="front__illust">
                <picture>
                     <source srcset="image/front_illust03_pc.webp" media="(min-width:769px)">
                     <img src="image/front_illust03_sp.webp" alt="">
                </picture>
           </div>
-          <div class="front__illust js-parallax">
+          <div class="front__illust">
                <picture>
                     <source srcset="image/front_illust04_pc.webp" media="(min-width:769px)">
                     <img src="image/front_illust04_sp.webp" alt="">
                </picture>
           </div>
           <div class="front__txt">
-               <h1><img src="image/front_txt.webp" alt="マイナビ2025 就活準備ラストスパート"></h1>
+               <h1>
+                    <img class="fadeIn" src="image/front_txt01.webp" alt="マイナビ2025">
+                    <img class="fadeIn" src="image/front_txt02.webp" alt="就活準備">
+                    <img class="fadeIn" src="image/front_txt03.webp" alt="ラストスパート">
+               </h1>
                <p class="u-device-pc"><span>3月からの就職活動開始を前に、</span><span>ここからの時期がとてもとても大切です。</span></p>
                <p class="u-device-pc"><span>これまで就活準備を着実に進めてきた人にも、</span><span>ここから就活準備をはじめるという人にも、</span><span>おすすめしたい「就活準備のラストスパートアクション」を</span><span>ここでご紹介します。</span></p>
                <p class="u-device-pc">12月・1月・2月にぜひやってほしいと思うこと。<br>アクションのキーワードは「不・決・先」です。</p>
@@ -85,7 +93,7 @@
                     </div>
                </div>
           </div>
-          <div class="content__body swiper js-mainSlide">
+          <div id="parent" class="content__body swiper js-mainSlide">
                <div class="swiper-wrapper">
                     <div class="swiper-slide">
                          <div class="inner">
@@ -97,7 +105,7 @@
                               <div class="box">
                                    <h4 class="box__head">12月のゴール</h4>
                                    <p class="box__lead">気になる企業＝<br class="u-device-sp">検討リストを整理しよう</p>
-                                   <div class="box__btn -active"><a href="">あなたの検討リストを<span>みてみよう</span></a></div>
+                                   <div class="box__btn -active js-fadein"><a href="">あなたの検討リストを<span>みてみよう</span></a></div>
                               </div>
                               <div class="box">
                                    <h4 class="box__head">ゴールのためのおすすめアクション</h4>
@@ -107,11 +115,11 @@
                                         <h5 class="head">おすすめの機会</h5>
                                         <div class="column">
                                              <img src="image/arrow_black.webp" alt="">
-                                             <p><a href="">インターンシップ・仕事体験<img src="image/arrow_orange.webp" alt=""></a><br class="u-device-sp">に参加してみる</p>
+                                             <p><a class="js-fadein" href="">インターンシップ・仕事体験<img src="image/arrow_orange.webp" alt=""></a><br class="u-device-sp">に参加してみる</p>
                                         </div>
                                         <div class="column">
                                              <img src="image/arrow_black.webp" alt="">
-                                             <p><a href="">合同説明会<img src="image/arrow_orange.webp" alt=""></a>に参加してみる</p>
+                                             <p><a class="js-fadein" href="">合同説明会<img src="image/arrow_orange.webp" alt=""></a>に参加してみる</p>
                                         </div>
                                    </div>
                                    <div class="box__action"><span class="icon">アクションB</span><span class="txt">「不明」なものは会いに行って確認しよう</span></div>
@@ -119,11 +127,11 @@
                                         <h5 class="head">おすすめの機会</h5>
                                         <div class="column">
                                              <img src="image/arrow_black.webp" alt="">
-                                             <p><a href="">＋1就活準備特集<img src="image/arrow_orange.webp" alt=""></a>をみてみる</p>
+                                             <p><a class="js-fadein" href="">＋1就活準備特集<img src="image/arrow_orange.webp" alt=""></a>をみてみる</p>
                                         </div>
                                    </div>
                               </div>
-                              <div class="link"><a href=""><span>3月企業エントリー開始までの</span><span>スケジュールも確認しておこう</span></a></div>
+                              <div class="link js-fadein"><a href=""><span>3月企業エントリー開始までの</span><span>スケジュールも確認しておこう</span></a></div>
                          </div>
                     </div>
                     <div class="swiper-slide">
@@ -137,8 +145,8 @@
                                    <h4 class="box__head">1月のゴール</h4>
                                    <p class="box__lead"><span>本選考に応募したい企業を</span><span>予約リストに追加しよう</span></p>
                                    <div class="box__btnwrapper">
-                                        <div class="box__btn -modifier"><a href="">検討リストを<span>予約リストに</span><span class="small">（2024.1.10～）</span></a></div>
-                                        <div class="box__btn -modifier"><a href="">応募済みリストを<span>予約リストに</span><span class="small">（2024.1.10～）</span></a></div>
+                                        <div class="box__btn -modifier js-fadein"><a href="">検討リストを<span>予約リストに</span><span class="small">（2024.1.10～）</span></a></div>
+                                        <div class="box__btn -modifier js-fadein"><a href="">応募済みリストを<span>予約リストに</span><span class="small">（2024.1.10～）</span></a></div>
                                    </div>
                               </div>
                               <div class="box">
@@ -149,7 +157,7 @@
                                         <h5 class="head">おすすめの機会</h5>
                                         <div class="column">
                                              <img src="image/arrow_black.webp" alt="">
-                                             <p><a href="">インターンシップ・仕事体験<img src="image/arrow_orange.webp" alt=""></a>に参加してみる</p>
+                                             <p><a class="js-fadein" href="">インターンシップ・仕事体験<img src="image/arrow_orange.webp" alt=""></a>に参加してみる</p>
                                         </div>
                                    </div>
                                    <div class="box__action"><span class="icon">アクションC</span><span class="txt"><span>何か物足りないなら</span><span>グッとくる会社を追加しよう</span></span></div>
@@ -157,11 +165,11 @@
                                         <h5 class="head">おすすめの機会</h5>
                                         <div class="column">
                                              <img src="image/arrow_black.webp" alt="">
-                                             <p><a href="">＋1就活準備特集<img src="image/arrow_orange.webp" alt=""></a>をみてみる</p>
+                                             <p><a class="js-fadein" href="">＋1就活準備特集<img src="image/arrow_orange.webp" alt=""></a>をみてみる</p>
                                         </div>
                                    </div>
                               </div>
-                              <div class="link"><a href=""><span>3月企業エントリー開始までの</span><span>スケジュールも確認しておこう</span></a></div>
+                              <div class="link js-fadein"><a href=""><span>3月企業エントリー開始までの</span><span>スケジュールも確認しておこう</span></a></div>
                          </div>
                     </div>
                     <div class="swiper-slide">
@@ -174,7 +182,7 @@
                               <div class="box">
                                    <h4 class="box__head">2月のゴール</h4>
                                    <p class="box__lead"><span>本選考に応募したい企業の</span><span>本年度募集情報をチェックしよう</span></p>
-                                   <div class="box__btn"><a href="">本年度募集情報を検索<span class="small">（2024.2.13～）</span></a></div>
+                                   <div class="box__btn"><a class="js-fadein" href="">本年度募集情報を検索<span class="small">（2024.2.13～）</span></a></div>
                               </div>
                               <div class="box">
                                    <h4 class="box__head">ゴールのためのおすすめアクション</h4>
@@ -183,7 +191,7 @@
                                         <h5 class="head">おすすめの機会</h5>
                                         <div class="column">
                                              <img src="image/arrow_black.webp" alt="">
-                                             <p><a href="">本年度最新応募情報<img src="image/arrow_orange.webp" alt=""></a>全体をみる</p>
+                                             <p><a class="js-fadein" href="">本年度最新応募情報<img src="image/arrow_orange.webp" alt=""></a>全体をみる</p>
                                         </div>
                                    </div>
                                    <div class="box__action"><span class="icon">アクションB</span><span class="txt">希望条件とずれがないかを確認しよう</span></div>
@@ -191,7 +199,7 @@
                                         <h5 class="head">おすすめの機会</h5>
                                         <div class="column">
                                              <img src="image/arrow_black.webp" alt="">
-                                             <p><a href="">初任給や勤務時間、休暇<img src="image/arrow_orange.webp" alt=""></a>などをみる</p>
+                                             <p><a class="js-fadein" href="">初任給や勤務時間、休暇<img src="image/arrow_orange.webp" alt=""></a>などをみる</p>
                                         </div>
                                    </div>
                                    <div class="box__action"><span class="icon">アクションC</span><span class="txt">選考基準にずれがないかを確認しよう</span></div>
@@ -199,15 +207,15 @@
                                         <h5 class="head">おすすめの機会</h5>
                                         <div class="column">
                                              <img src="image/arrow_black.webp" alt="">
-                                             <p><a href="">募集人数や選考情報</a>などをみる</p>
+                                             <p><a class="js-fadein" href="">募集人数や選考情報</a>などをみる</p>
                                         </div>
                                    </div>
                               </div>
-                              <div class="link"><a href=""><span>3月企業エントリー開始までの</span><span>スケジュールも確認しておこう</span></a></div>
+                              <div class="link js-fadein"><a href=""><span>3月企業エントリー開始までの</span><span>スケジュールも確認しておこう</span></a></div>
                          </div>
                     </div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev js-follow"></div>
+                    <div class="swiper-button-next js-follow"></div>
                </div>
           </div>
      </section>
