@@ -20,7 +20,6 @@ document.addEventListener('DOMContentLoaded', function () {
 		speed: 1000,
 		breakpoints: {
 			769: {
-				centeredSlides: false,
 				spaceBetween: 32,
 				slidesPerView: 4,
 			},
