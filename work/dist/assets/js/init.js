@@ -16,17 +16,19 @@ document.addEventListener('DOMContentLoaded', function () {
 			}
 		);
 	});
-	const follower = document.getElementById('js-follow');
-	gsap.to(follower, {
-		scrollTrigger: {
-			trigger: ".js-follow",
-			start: "top 30%",
-			end: "bottom bottom",
-			endTrigger: "#parent",
-			pin: true,
-			scrub: true,
-			markers: true
-		},
+	gsap.to(".js-follow", {
+	  scrollTrigger: {
+		trigger: ".js-follow",
+		start: "top 30%",
+		end: "bottom top",
+		endTrigger: ".content",
+		scrub: true,
+		markers: true,
+		toggleClass: {
+            targets: ".js-follow",
+            className: "-fixed",
+        },
+	  },
 	});
 	var swiper_thumb = new Swiper(".js-thumbSlide", {
 		loop: false,

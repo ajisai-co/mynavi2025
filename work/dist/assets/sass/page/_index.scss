@@ -343,21 +343,18 @@
         }
     }
     &__body {
-        position: relative;
         width: 93.75%;
         max-width: 1200px;
         padding: 0 40px !important;
         margin: 0 auto;
         z-index: 10;
+        position: relative;
         .swiper-wrapper {
-            height: auto;
+            height: 100%;
         }
         .swiper-slide {
-            height: auto;
             z-index: 10;
             .inner {
-                position: relative;
-                height: auto;
                 padding: 60px 20px 108px;
                 background: #fff;
                 border-radius: 40px;
@@ -419,7 +416,11 @@
             position: absolute;
             height: 80px;
             width: 80px;
-            top: 205px;
+            top: 225px;
+            &.-fixed {
+                position: fixed;
+                top: 245px;
+            }
         }
         /* 前へ次への矢印カスタマイズ */
         .swiper-button-prev::after,
@@ -431,12 +432,18 @@
         }
         /* 前への矢印カスタマイズ */
         .swiper-button-prev {
-            left: -40px;
+            left: 0;
             transform: scale(-1, 1);
+            &.-fixed {
+                left: 3.2%;
+            }
         }
         /* 次への矢印カスタマイズ */
         .swiper-button-next {
-            right: -40px;
+            right: 0;
+            &.-fixed {
+                right: 3.2%;
+            }
         }
         .swiper-button-disabled {
             opacity: 0;
@@ -842,7 +849,7 @@
         }
     }
     .content {
-        overflow: hidden;
+        // overflow: hidden;
         padding-bottom: common.calcResp(24);
         &__head {
             font-size: 2.2rem;
@@ -951,12 +958,21 @@
                 width: common.calcResp(50);
                 height: common.calcResp(50);
                 top: 8%;
+                &.-fixed {
+                    top: common.calcResp(205);
+                }
             }
             .swiper-button-prev {
                 left: common.calcResp(-16);
+                &.-fixed {
+                    left: -4%;
+                }
             }
             .swiper-button-next {
                 right: common.calcResp(-16);
+                &.-fixed {
+                    right: -4%;
+                }
             }
             .swiper-slide {
                 padding-top: 0;
