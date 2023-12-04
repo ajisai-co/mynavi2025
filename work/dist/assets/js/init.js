@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			crossFade: true,
 		},
 		loop: false,
-		speed: 1000,
+		speed: 500,
 		spaceBetween: 10,
 		slidesPerView: 1,
 		centeredSlides: true,
@@ -79,8 +79,8 @@ document.addEventListener('DOMContentLoaded', function () {
 		},
 		on: {
 			slideChangeTransitionEnd: function () {
-				var delayedElement = document.querySelector('.js-mainSlide .swiper-slide-active');
-				gsap.to(delayedElement, { opacity: 1, duration: .7, delay: 0.5 });
+				// var delayedElement = document.querySelector('.js-mainSlide .swiper-slide-active');
+				// gsap.to(delayedElement, { opacity: 1, duration: .7, delay: 0.5 });
 			},
 		},
 		breakpoints: {
@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				},
 			},
 		},
-		});
+	});
 	swiper_thumb.on('slideChange', function() {
 		swiper_main.slideTo(swiper_thumb.activeIndex);
 	});
