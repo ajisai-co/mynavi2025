@@ -16,20 +16,38 @@ document.addEventListener('DOMContentLoaded', function () {
 			}
 		);
 	});
-	gsap.to(".js-follow", {
-	  scrollTrigger: {
-		trigger: ".js-follow",
-		start: "top 30%",
-		end: "bottom top",
-		endTrigger: ".content",
-		scrub: true,
-		markers: true,
-		toggleClass: {
-            targets: ".js-follow",
-            className: "-fixed",
-        },
-	  },
-	});
+	let isMobile = window.matchMedia("(max-width: 768px)");
+	if(isMobile.matches) {
+		gsap.to(".js-slide-controls-follow", {
+			scrollTrigger: {
+				trigger: ".js-slide-controls-follow",
+				start: "top 24%",
+				end: "bottom top",
+				endTrigger: ".content",
+				scrub: true,
+				markers: true,
+				toggleClass: {
+					targets: ".js-slide-controls-follow",
+					className: "-fixed",
+				},
+			},
+			});
+	}else {
+		gsap.to(".js-slide-controls-follow", {
+		scrollTrigger: {
+			trigger: ".js-slide-controls-follow",
+			start: "top 23%",
+			end: "bottom top",
+			endTrigger: ".content",
+			scrub: true,
+			markers: true,
+			toggleClass: {
+				targets: ".js-slide-controls-follow",
+				className: "-fixed",
+			},
+		},
+		});
+	}
 	var swiper_thumb = new Swiper(".js-thumbSlide", {
 		loop: false,
 		spaceBetween: 24,

@@ -155,6 +155,7 @@
 }
 .content {
     padding-bottom: 125px;
+    overflow: hidden;
     &__head {
         @include fonts.Noto-Sans;
         font-size: 3.2rem;
@@ -411,16 +412,32 @@
         .swiper-button-disabled {
             transition: .6s;
         }
+        .swiper-btn-wrapper{
+            max-width: 1200px;
+            position: absolute;
+            top: 225px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            z-index: 8;
+            @include mediaquery.sp {
+                top: 180px;
+            }
+            &.-fixed {
+                position: fixed;
+                
+            }
+        }
         .swiper-button-prev,
         .swiper-button-next {
             position: absolute;
             height: 80px;
             width: 80px;
-            top: 225px;
-            &.-fixed {
-                position: fixed;
-                top: 245px;
-            }
+            top: 0;
+            // &.-fixed {
+            //     position: fixed;
+            //     top: 245px;
+            // }
         }
         /* 前へ次への矢印カスタマイズ */
         .swiper-button-prev::after,
