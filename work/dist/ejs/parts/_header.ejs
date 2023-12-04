@@ -1,3 +1,6 @@
+<?php 
+include("/home/hirota/inc/25/share/getHeader_support_utf8.php");?>
+
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -8,7 +11,7 @@
 <meta name="keywords" content="キーワードが入ります">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-<!-- <?php
+<?php
   $ua=$_SERVER['HTTP_USER_AGENT'];
   $browser = ((strpos($ua,'iPhone')!==false)||(strpos($ua,'iPod')!==false)||(strpos($ua,'Android')!==false));
   //if ($browser == true){
@@ -17,31 +20,36 @@
   }else{
   $browser = 'pc';
   }
-?> -->
-<!-- <?php if($browser == 'sp'){ ?> -->
+?>
+<?php if($browser == 'sp'){ ?>
   
 
 <!-- スマホ用JS、CSSなどをここに記述してください -->
-<!-- <link rel="stylesheet" href="/conts/2025/s/css/base.css" media="screen"> -->
-<!-- <link rel="stylesheet" href="/conts/2025/s/css/module.css" media="screen"> -->
-<!-- <script type="text/javascript" src="/conts/2025/s/js/jquery.js"></script> -->
-<!-- <?php }else{ ?> -->
+<link rel="stylesheet" href="/conts/2025/s/css/base.css" media="screen">
+<link rel="stylesheet" href="/conts/2025/s/css/module.css" media="screen">
+<script type="text/javascript" src="/conts/2025/s/js/jquery.js"></script>
+<?php }else{ ?>
 <!-- PC用JS、CSSなどをここに記述してください -->
-<!-- <link rel="stylesheet" type="text/css" href="/conts/2025/css/common.css"> -->
-<!-- <link rel="stylesheet" type="text/css" href="/conts/2025/css/layout90.css"> -->
-<!-- <script type="text/javascript" src="/conts/2025/js/jquery.js"></script> -->
-<!-- <?php } ?> -->
+<link rel="stylesheet" type="text/css" href="/conts/2025/css/common.css">
+<link rel="stylesheet" type="text/css" href="/conts/2025/css/layout90.css">
+<script type="text/javascript" src="/conts/2025/js/jquery.js"></script>
+<?php } ?>
 <!-- PC・スマホ共通JS、CSSなどをここに記述してください -->
-<!-- <link href="/conts/2025/css/common2025.css" rel="stylesheet"> -->
+<link href="/conts/2025/css/common2025.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400;500;700&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="js/init.js"></script>
 <link rel="stylesheet" href="css/style.css">
 <!-- レスポンシブの場合、ここにcssやjsのタグを挿入 -->
-<!-- <?php print $jsAddDataLayer.$jsAddUA;?> -->
+<?php print $jsAddDataLayer.$jsAddUA;?>
 </head>
 	<body>
-	<!-- <?php print $jsAddGTM;?> -->
+	<?php print $jsAddGTM;?>
 
-	<!-- <?php print $html_header;?> -->
+	<?php print $html_header;?>

@@ -1,12 +1,21 @@
-<footer role="contentinfo" class="l-footer">
-	
-	<button class="l-footer__pagetop js-pageTop"></button>
+<!-- ▲／コンテンツ本文ここから end -->
+<?php print $html_fb; ?>
+<?php if($browser != 'sp'){ ?>
+	<p class="toPageTop">
+		<a href="#top" onclick="backToTop(); return false">ページTOPへ</a>
+	</p> 
+<?php } ?>
+	</div>
+			
 
-	<small class="l-footer__copyright">&copy; </small>
-</footer>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
-<script src="assets/js/init.js"></script>
+<!--フッターの出し分け -->
+<?php if($browser == 'sp'){ ?>
+	<?php print $html_social_link_sp; ?>
+	<?php print $html_footer_sp;?>
+<?php }else{ ?>
+<?php print $html_footer;?>
+<?php } ?>
+
+計測用タグのスクリプト記述
 </body>
 </html>
