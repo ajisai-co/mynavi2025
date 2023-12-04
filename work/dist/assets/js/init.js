@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				end: "bottom top",
 				endTrigger: ".content",
 				scrub: true,
-				markers: true,
+				// markers: true,
 				toggleClass: {
 					targets: ".js-slide-controls-follow",
 					className: "-fixed",
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			end: "bottom top",
 			endTrigger: ".content",
 			scrub: true,
-			markers: true,
+			// markers: true,
 			toggleClass: {
 				targets: ".js-slide-controls-follow",
 				className: "-fixed",
