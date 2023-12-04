@@ -80,16 +80,16 @@ document.addEventListener('DOMContentLoaded', function () {
 		on: {
 			slideChangeTransitionEnd: function () {
 			var delayedElement = document.querySelector('.js-mainSlide .swiper-slide-active');
-			gsap.to(delayedElement, { opacity: 1, duration: 1, delay: 0.5 });
+				gsap.to(delayedElement, { opacity: 1, duration: .7, delay: 0.5 });
 			},
 		},
 		breakpoints: {
 			769: {
-			spaceBetween: 20,
-			slidesPerView: 1,
-			scrollbar: {
-				dragSize: '267',
-			},
+				spaceBetween: 20,
+				slidesPerView: 1,
+				scrollbar: {
+					dragSize: '267',
+				},
 			},
 		},
 		});
