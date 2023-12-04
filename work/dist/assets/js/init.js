@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		},
 		on: {
 			slideChangeTransitionEnd: function () {
-			var delayedElement = document.querySelector('.js-mainSlide .swiper-slide-active');
+				var delayedElement = document.querySelector('.js-mainSlide .swiper-slide-active');
 				gsap.to(delayedElement, { opacity: 1, duration: .7, delay: 0.5 });
 			},
 		},
