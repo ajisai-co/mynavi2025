@@ -1,17 +1,21 @@
 
 
 document.addEventListener('DOMContentLoaded', function () {
-	gsap.utils.toArray('.js-fadein').forEach(target => {
-		gsap.fromTo(target, {
+	gsap.utils.toArray('.js-popIn').forEach(target => {
+		gsap.fromTo(target, .3,{
 			opacity: 0,
-			ease: "power1.inOut",
+			translate: -10,
+			scale: .8,
+			ease: "bounce.out",
 			}, {
 				opacity: 1,
+				translate: 0,
+				scale: 1,
 				scrollTrigger: {
 					trigger: target,
-					scrub: 1,
-					start: "top bottom",
-					end: "center center"
+					// scrub: 0,
+					start: "top bottom-=50",
+					// end: "center center"
 				},
 			}
 		);

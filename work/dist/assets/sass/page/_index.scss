@@ -784,6 +784,17 @@
                             bottom: -2px;
                             background: #F77748;
                         }
+                        &.-noactive{
+                            cursor: none;
+                            pointer-events: none;
+                            color: #797979;
+                            img{
+                                filter: grayscale(1);
+                            }
+                            &::after{
+                                background: #797979;
+                            }
+                        }
                     }
                     & + .column {
                         margin-top: 22px;
@@ -1184,6 +1195,7 @@
                                     width: common.calcResp(22);
                                     height: auto;
                                     transform: translateY(-2px);
+                                    margin: 0 3px;
                                 }
                             }
                             & + .column {
