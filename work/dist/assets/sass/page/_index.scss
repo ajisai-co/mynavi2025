@@ -194,6 +194,9 @@
             font-size: 1.8rem;
             color: #fff;
             line-height: 1.78;
+            @include mediaquery.sp {
+                text-align: left;
+            }
             span {
                 display: block;
                 @include fonts.Noto-Sans;
