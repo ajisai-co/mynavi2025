@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				trigger: ".js-slide-controls-follow",
 				start: "top 24%",
 				end: "bottom top",
-				endTrigger: ".content",
+				endTrigger: ".lastspurt2023-content",
 				scrub: true,
 				// markers: true,
 				toggleClass: {
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			trigger: ".js-slide-controls-follow",
 			start: "top 23%",
 			end: "bottom top",
-			endTrigger: ".content",
+			endTrigger: ".lastspurt2023-content",
 			scrub: true,
 			// markers: true,
 			toggleClass: {
