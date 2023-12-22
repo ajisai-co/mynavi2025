@@ -30,7 +30,7 @@ include("/home/hirota/inc/25/share/getHeader_support_utf8.php");?>
 <script type="text/javascript" src="/conts/2025/s/js/jquery.js"></script>
 <?php }else{ ?>
 <!-- PC用JS、CSSなどをここに記述してください -->
-<link rel="stylesheet" type="text/css" href="//job.mynavi.jp/conts/2025/css/common.css">
+<link rel="stylesheet" type="text/css" href="/conts/2025/css/common.css">
 <script type="text/javascript" src="/conts/2025/js/jquery.js"></script>
 <?php } ?>
 <!-- PC・スマホ共通JS、CSSなどをここに記述してください -->
@@ -62,7 +62,7 @@ array('/conts/2025/yoyakulist/','就活準備ラストスパート')));} ?>
 	<!-- ▼コンテンツ本文ここから start -->
 
 <!-- ▼パンくず・プリントボタン start -->
-<div id="topicpathArea" style="margin-left:25%;">
+<div id="topicpathArea">
      <ul class="topicpath">
      <li><a href="/2025/">トップ</a></li>
      <li>就活準備ラストスパート</li>
@@ -84,23 +84,20 @@ array('/conts/2025/yoyakulist/','就活準備ラストスパート')));} ?>
           </div>
           <div class="lastspurt2023-front__illust">
                <picture>
-                    <img src="image/front_illust01_pc.webp" alt="">
+                    <source srcset="image/front_illust01_pc.webp" media="(min-width:769px)">
+                    <img src="image/front_illust01_sp.webp" alt="">
                </picture>
           </div>
           <div class="lastspurt2023-front__illust">
                <picture>
-                    <img src="image/front_illust02_pc.webp" alt="">
+                    <source srcset="image/front_illust02_pc.webp" media="(min-width:769px)">
+                    <img src="image/front_illust02_sp.webp" alt="">
                </picture>
           </div>
-          <!-- <div class="lastspurt2023-front__illust">
-               <picture>
-                    <source srcset="image/front_illust03_pc.webp" media="(min-width:769px)">
-                    <img src="image/front_illust03_sp.webp" alt="">
-               </picture>
-          </div> -->
           <div class="lastspurt2023-front__illust">
                <picture>
-                    <img src="image/front_illust04_pc.webp" alt="">
+                    <source srcset="image/front_illust04_pc.webp" media="(min-width:769px)">
+                    <img src="image/front_illust04_sp.webp" alt="">
                </picture>
           </div>
           <div class="lastspurt2023-front__txt">
@@ -119,7 +116,7 @@ array('/conts/2025/yoyakulist/','就活準備ラストスパート')));} ?>
      <section class="lastspurt2023-content">
           <h2 class="lastspurt2023-content__head">就活準備<br class="u-device-sp">ラストスパートアクション</h2>
           <div class="lastspurt2023-content__thumb swiper-container js-thumbSlide">
-               <div class="swiper-wrapper"  style="max-height: 2100px;">
+               <div class="swiper-wrapper">
                     <div class="swiper-slide swiper-slide-thumb-active">
                          <time datetime="12/1"><img src="image/thumb05.webp" alt=""></time>
                          <h3 class="head">検討リスト<span>を整理</span></h3>
@@ -145,7 +142,7 @@ array('/conts/2025/yoyakulist/','就活準備ラストスパート')));} ?>
                </div>
           </div>
           <div id="parent" class="lastspurt2023-content__body swiper js-mainSlide">
-               <div class="swiper-wrapper"  style="max-height: 2100px;">
+               <div class="swiper-wrapper" style="max-height:2100px;">
                     <div class="swiper-slide">
                          <div class="inner">
                               <div class="head"><h3><span class="txt-blue">不</span>を認識する12月</h3></div>
@@ -276,7 +273,7 @@ array('/conts/2025/yoyakulist/','就活準備ラストスパート')));} ?>
 <!-- ▲／コンテンツ本文ここから end -->
 <?php print $html_fb; ?>
 <?php if($browser != 'sp'){ ?>
-<p class="btn-top-01"><a href="#top">ページTOPへ</a></p> 
+	<p class="btn-top-01"><a href="#top">ページTOPへ</a></p>
 <?php } ?>
 	</div>
 			
@@ -289,8 +286,8 @@ array('/conts/2025/yoyakulist/','就活準備ラストスパート')));} ?>
 <?php print $html_footer;?>
 <?php } ?>
 
-<script>
-gtag('event', 'pageload_yoyakulist', { 'page_content': '予約リスト' });
+<script>	
+gtag('event', 'pageload_yoyakulist', { 'page_content': '予約リストLP' });	
 </script>
 </body>
 </html>
