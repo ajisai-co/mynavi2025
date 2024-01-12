@@ -1441,6 +1441,9 @@ body {
 		transform: translateY(-2px);
 		margin: 0 3px
 	}
+	.lastspurt2023-content__body .swiper-slide .box__frame .column a .u-device-sp{
+		display: inline-block;
+	}
 	.lastspurt2023-content__body .swiper-slide .box__frame .column+.column {
 		margin-top: 2.6666666667vw
 	}
