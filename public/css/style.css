@@ -1430,6 +1430,13 @@ body {
 		font-size: 4vw;
 		line-height: 1.875
 	}
+	.lastspurt2023-content__body .swiper-slide .box__frame .column a.-modifier {
+		background:linear-gradient(transparent 96%, #797979 0%);
+		display: inline;
+	}
+	.lastspurt2023-content__body .swiper-slide .box__frame .column a.-modifier::after{
+		content: none;
+	}
 	.lastspurt2023-content__body .swiper-slide .box__frame .column a:after {
 		width: calc(100% - 5.3333333333vw - 10px);
 		bottom: 0
