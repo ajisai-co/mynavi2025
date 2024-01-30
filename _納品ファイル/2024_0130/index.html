@@ -1,0 +1,306 @@
+<?php 
+include("/home/hirota/inc/25/share/getHeader_support_utf8.php");?>
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+<meta charset="UTF-8">
+<title>マイナビ2025 就活準備ラストスパート</title>
+<meta name="description" content="ディスクリプションの記述が入ります">
+<meta name="keywords" content="キーワードが入ります">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<?php
+  $ua=$_SERVER['HTTP_USER_AGENT'];
+  $browser = ((strpos($ua,'iPhone')!==false)||(strpos($ua,'iPod')!==false)||(strpos($ua,'Android')!==false));
+  //if ($browser == true){
+  if($_COOKIE['mynavi2025_device'] == 'smartphone'){
+  $browser = 'sp';
+  }else{
+  $browser = 'pc';
+  }
+?>
+<?php if($browser == 'sp'){ ?>
+  
+
+<!-- スマホ用JS、CSSなどをここに記述してください -->
+<link rel="stylesheet" href="/conts/2025/s/css/base.css" media="screen">
+<link rel="stylesheet" href="/conts/2025/s/css/module.css" media="screen">
+<script type="text/javascript" src="/conts/2025/s/js/jquery.js"></script>
+<?php }else{ ?>
+<!-- PC用JS、CSSなどをここに記述してください -->
+<link rel="stylesheet" type="text/css" href="/conts/2025/css/common.css">
+<script type="text/javascript" src="/conts/2025/js/jquery.js"></script>
+<?php } ?>
+<!-- PC・スマホ共通JS、CSSなどをここに記述してください -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400;500;700&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="js/init.js"></script>
+<link rel="stylesheet" href="/conts/2025/css/common2025.css">
+<link rel="stylesheet" href="css/style.css">
+<!-- レスポンシブの場合、ここにcssやjsのタグを挿入 -->
+<?php print $jsAddDataLayer.$jsAddUA;?>
+</head>
+	<body>
+	<?php print $jsAddGTM;?>
+
+	<?php print $html_header;?>
+<main role="main" class="l-common">
+<!-- ▼パンくず・構造化 start -->
+<?php //パンクズが一つの場合
+if(function_exists('pc_pankuzu_set')){ print pc_pankuzu_set(array(
+array('/conts/2025/yoyakulist/','就活準備ラストスパート')));} ?>
+<!-- ▲／パンくず・構造化 end -->
+
+	<!-- ▼コンテンツ本文ここから start -->
+
+<!-- ▼パンくず・プリントボタン start -->
+<div id="topicpathArea">
+     <ul class="topicpath">
+     <li><a href="/2025/">トップ</a></li>
+     <li>就活準備ラストスパート</li>
+     </ul>
+</div>
+<!-- ▲／パンくず・プリントボタン end -->
+
+<!-- コンテンツ要素を自由記述 start -->
+     <section class="lastspurt2023-front">
+          <div class="lastspurt2023-front__bg">
+               <picture class="lastspurt2023-front__bg__color">
+                    <source srcset="image/front_bg01_pc.webp" media="(min-width:769px)">
+                    <img src="image/front_bg01_sp.webp" alt="">
+               </picture>
+               <picture class="lastspurt2023-front__bg__illust">
+                    <source srcset="image/front_bg02_pc.webp" media="(min-width:769px)">
+                    <img src="image/front_bg02_sp.webp" alt="">
+               </picture>
+          </div>
+          <div class="lastspurt2023-front__illust">
+               <picture>
+                    <source srcset="image/front_illust01_pc.webp" media="(min-width:769px)">
+                    <img src="image/front_illust01_sp.webp" alt="">
+               </picture>
+          </div>
+          <div class="lastspurt2023-front__illust">
+               <picture>
+                    <source srcset="image/front_illust02_pc.webp" media="(min-width:769px)">
+                    <img src="image/front_illust02_sp.webp" alt="">
+               </picture>
+          </div>
+          <div class="lastspurt2023-front__illust">
+               <picture>
+                    <source srcset="image/front_illust04_pc.webp" media="(min-width:769px)">
+                    <img src="image/front_illust04_sp.webp" alt="">
+               </picture>
+          </div>
+          <div class="lastspurt2023-front__txt">
+               <h1>
+                    <img class="fadeIn recommend-icon" src="image/front_txt04.webp" alt="おすすめ">
+                    <img class="fadeIn" src="image/front_txt01.webp" alt="マイナビ2025">
+                    <img class="fadeIn-left" src="image/front_txt02.webp" alt="就活準備">
+                    <img class="fadeIn" src="image/front_txt03.webp" alt="ラストスパート">
+               </h1>
+               <p class="u-device-pc"><span>3月からの就職活動開始を前に、</span><span>ここからの時期がとてもとても大切です。</span></p>
+               <p class="u-device-pc"><span>これまで就活準備を着実に進めてきた人にも、</span><span>ここから就活準備をはじめるという人にも、</span><span>おすすめしたい「就活準備のラストスパートアクション」を</span><span>ここでご紹介します。</span></p>
+               <p class="u-device-pc">12月・1月・2月にぜひやってほしいと思うこと。<br>アクションのキーワードは「不・決・先」です。</p>
+               <p class="u-device-sp">3月からの就職活動開始を前に、ここからの時期がとてもとても大切です。これまで就活準備を着実に進めてきた人にも、ここから就活準備をはじめるという人にも、おすすめしたい「就活準備のラストスパートアクション」をここでご紹介します。12月・1月・2月にぜひやってほしいと思うこと。アクションのキーワードは「不・決・先」です。</p>
+          </div>
+     </section>
+     <section class="lastspurt2023-content">
+          <h2 class="lastspurt2023-content__head">就活準備<br class="u-device-sp">ラストスパートアクション</h2>
+          <div class="lastspurt2023-content__thumb swiper-container js-thumbSlide">
+               <div class="swiper-wrapper">
+                    <div class="swiper-slide swiper-slide-thumb-active">
+                         <time datetime="12/1"><img src="image/thumb05.webp" alt=""></time>
+                         <h3 class="head">検討リスト<span>を整理</span></h3>
+                         <div class="lastspurt2023-icon"><img src="image/thumb01.webp" alt=""></div>
+                         <div class="more"><img src="image/icon_serch.webp" alt="">詳しく</div>
+                    </div>
+                    <div class="swiper-slide">
+                         <time datetime="1/10"><img src="image/thumb06.webp" alt=""></time>
+                         <h3 class="head">予約リスト<span>に追加</span></h3>
+                         <div class="lastspurt2023-icon"><img src="image/thumb02.webp" alt=""></div>
+                         <div class="more"><img src="image/icon_serch.webp" alt="">詳しく</div>
+                    </div>
+                    <div class="swiper-slide">
+                         <time datetime="2/13"><img src="image/thumb07.webp" alt=""></time>
+                         <h3 class="head">応募情報<span>をチェック</span></h3>
+                         <div class="lastspurt2023-icon"><img src="image/thumb03.webp" alt=""></div>
+                         <div class="more"><img src="image/icon_serch.webp" alt="">詳しく</div>
+                    </div>
+                    <div class="swiper-slide -modifier">
+                         <time datetime="3/1"><img src="image/thumb08.webp" alt=""></time>
+                         <h3 class="head">企業<span>エントリー</span><span>開始</span></h3>
+                    </div>
+               </div>
+          </div>
+          <div id="parent" class="lastspurt2023-content__body swiper js-mainSlide">
+               <div class="swiper-wrapper" style="max-height:2100px;">
+                    <div class="swiper-slide">
+                         <div class="inner">
+                              <div class="head"><h3><span class="txt-blue">不</span>を認識する12月</h3></div>
+                              <div class="intro">
+                                   <div class="img"><img src="image/content01.webp" alt=""></div>
+                                   <div class="txt"><p>ここまで就活準備を進めてきた人にも、これから進めるという人にも向き合うべき「不」があります。<span class="txt-blue">12月は不を解消して検討リストを充実させよう。</span></p></div>
+                              </div>
+                              <div class="box">
+                                   <h4 class="box__head">12月のゴール</h4>
+                                   <p class="box__lead">気になる企業＝<br class="u-device-sp">検討リストを整理しよう</p>
+                                   <div class="box__btn -active js-popIn"><a href="https://job.mynavi.jp/25/pc/user/displayBookmarkList/index" target="_blank">あなたの検討リストを<span>みてみよう</span></a></div>
+                              </div>
+                              <div class="box">
+                                   <h4 class="box__head">ゴールのためのおすすめアクション</h4>
+                                   <div class="box__action"><span class="lastspurt2023-icon">アクションA</span><span class="txt">「不要」なものは検討リストから削除しよう</span></div>
+                                   <div class="box__action"><span class="lastspurt2023-icon">アクションB</span><span class="txt">「不明」なものは会いに行って確認しよう</span></div>
+                                   <div class="box__frame">
+                                        <h5 class="head">おすすめの機会</h5>
+                                        <div class="column">
+                                             <img src="image/arrow_black.webp" alt="">
+                                             <p><a class="js-popIn" href="https://job.mynavi.jp/25/pc/corpinfo/displayCorpSearchByIs/index" target="_blank">インターンシップ・仕事体験<img src="image/arrow_orange.webp" alt=""></a><br class="u-device-sp">に参加してみる</p>
+                                        </div>
+                                        <div class="column">
+                                             <img src="image/arrow_black.webp" alt="">
+                                             <p><a class="js-popIn" href="https://job.mynavi.jp/conts/2025/event/index.html" target="_blank">合同説明会<img src="image/arrow_orange.webp" alt=""></a>に参加してみる</p>
+                                        </div>
+                                   </div>
+                                   <div class="box__action"><span class="lastspurt2023-icon">アクションC</span><span class="txt">「不足」ならグッとくる企業を追加しよう</span></div>
+                                   <div class="box__frame -modifier">
+                                        <h5 class="head">おすすめの機会</h5>
+                                        <div class="column">
+                                             <img src="image/arrow_black.webp" alt="">
+                                             <p><a class="js-popIn" href="https://job.mynavi.jp/conts/2025/plus_one/index.html" target="_blank">＋1就活準備特集<img src="image/arrow_orange.webp" alt=""></a>をみてみる</p>
+                                        </div>
+                                   </div>
+                              </div>
+                              <div class="link js-popIn"><a href="https://job.mynavi.jp/conts/2025/schedule/" target="_blank"><span>3月企業エントリー開始までの</span><span>スケジュールも確認しておこう</span></a></div>
+                         </div>
+                    </div>
+                    <div class="swiper-slide">
+                         <div class="inner">
+                              <div class="head"><h3>本命を<span class="txt-blue">決</span>定する1月</h3></div>
+                              <div class="intro">
+                                   <div class="img"><img src="image/content02.webp" alt=""></div>
+                                   <div class="txt"><p>ここで一度「本命」を定めてみる。定めきれないようならば動いてみる。<span class="txt-blue">そして「予約リスト」に登録しておけば、3月1日に自動エントリーされます。</span></p></div>
+                              </div>
+                              <div class="box">
+                                   <h4 class="box__head">1月のゴール</h4>
+                                   <p class="box__lead"><span>本選考に応募したい企業を</span><span>予約リストに追加しよう</span></p>
+                                   <div class="box__btnwrapper">
+                                        <div class="box__btn -active -modifier js-popIn"><a href="https://job.mynavi.jp/25/pc/user/displayBookmarkList/index" target="_blank">検討リストを<span>予約リストに</span><span class="small">（2024.1.10～）</span></a></div>
+                                        <div class="box__btn -active -modifier js-popIn"><a href="https://job.mynavi.jp/25/pc/user/displayAppliedEntryCorpList/index?selected=all" target="_blank">応募済みリストを<span>予約リストに</span><span class="small">（2024.1.10～）</span></a></div>
+                                   </div>
+                              </div>
+                              <div class="box">
+                                   <h4 class="box__head">ゴールのためのおすすめアクション</h4>
+                                   <div class="box__action"><span class="lastspurt2023-icon">アクションA</span><span class="txt">本命をハッキリさせよう</span></div>
+                                   <div class="box__action"><span class="lastspurt2023-icon">アクションB</span><span class="txt">本命を迷うのなら会いに行って確認しよう</span></div>
+                                   <div class="box__frame">
+                                        <h5 class="head">おすすめの機会</h5>
+                                        <div class="column">
+                                             <img src="image/arrow_black.webp" alt="">
+                                             <p><a class="js-popIn" href="https://job.mynavi.jp/25/pc/corpinfo/displayCorpSearchByIs/index" target="_blank">インターンシップ・仕事体験<img src="image/arrow_orange.webp" alt=""></a>に参加してみる</p>
+                                        </div>
+                                   </div>
+                                   <div class="box__action"><span class="lastspurt2023-icon">アクションC</span><span class="txt"><span>何か物足りないなら</span><span>グッとくる会社を追加しよう</span></span></div>
+                                   <div class="box__frame -modifier">
+                                        <h5 class="head">おすすめの機会</h5>
+                                        <div class="column">
+                                             <img src="image/arrow_black.webp" alt="">
+                                             <p><a class="js-popIn" href="https://job.mynavi.jp/conts/2025/plus_one/index.html" target="_blank">＋1就活準備特集<img src="image/arrow_orange.webp" alt=""></a>をみてみる</p>
+                                        </div>
+                                   </div>
+                              </div>
+                              <div class="link js-popIn"><a href="https://job.mynavi.jp/conts/2025/schedule/" target="_blank"><span>3月企業エントリー開始までの</span><span>スケジュールも確認しておこう</span></a></div>
+                         </div>
+                    </div>
+                    <div class="swiper-slide">
+                         <div class="inner">
+                              <div class="head"><h3>採用情報を<span class="txt-blue">先</span>行確認する2月</h3></div>
+                              <div class="intro">
+                                   <div class="img"><img src="image/content03.webp" alt=""></div>
+                                   <div class="txt"><p>2月13日公開開始の「本年度選考情報」。<span class="txt-blue">本命企業を中心に早めに情報収集をしておこう。</span>2月13日から開始する「説明会事前予約」の活用も忘れずに。</p></div>
+                              </div>
+                              <div class="box">
+                                   <h4 class="box__head">2月のゴール</h4>
+                                   <p class="box__lead"><span>本選考に応募したい企業の</span><span>本年度募集情報をチェックしよう</span></p>
+                                   <div class="box__btn -active"><a class="js-popIn" href="https://job.mynavi.jp/25/pc/corpinfo/displayCorpSearch/index?tab=corp" target="_blank">本年度募集情報を検索<span class="small">（2024.2.13～）</span></a></div>
+                              </div>
+                              <div class="box">
+                                   <h4 class="box__head">ゴールのためのおすすめアクション</h4>
+                                   <div class="box__action"><span class="lastspurt2023-icon">アクションA</span><span class="txt">企業理解、募集情報のずれがないかを確認しよう</span></div>
+                                   <div class="box__frame">
+                                        <h5 class="head">おすすめの機会</h5>
+                                        <div class="column">
+                                             <img src="image/arrow_black.webp" alt="">
+                                             <p><a class="js-popIn -modifier" href="https://job.mynavi.jp/25/pc/user/displayBookmarkList/index?selected=entry_reserve" target="_blank">「予約リスト」から本年度の応募情報<img src="image/arrow_orange.webp" alt=""></a><span >をみる</span></p>
+                                        </div>
+                                   </div>
+                                   <div class="box__action"><span class="lastspurt2023-icon">アクションB</span><span class="txt">希望条件に合う企業を探そう</span></div>
+                                   <div class="box__frame">
+                                        <h5 class="head">おすすめの機会</h5>
+                                        <div class="column">
+                                             <img src="image/arrow_black.webp" alt="">
+                                             <p><a class="js-popIn" href="https://job.mynavi.jp/25/pc/search/query.html?NRSS:1,2,3,4,5/OP:16/&sch=HcNQo" target="_blank">初任給<img src="image/arrow_orange.webp" alt=""></a>から探す</p>
+                                        </div>
+                                        <div class="column">
+                                             <img src="image/arrow_black.webp" alt="">
+                                             <p><a class="js-popIn" href="https://job.mynavi.jp/25/pc/search/query.html?AOW:45/OP:16/&sch=EIOdW" target="_blank">月の残業時間<img src="image/arrow_orange.webp" alt=""></a>から探す</p>
+                                        </div>
+                                        <div class="column">
+                                             <img src="image/arrow_black.webp" alt="">
+                                             <p><a class="js-popIn" href="https://job.mynavi.jp/25/pc/search/query.html?APH:0/OP:16/&sch=vnMg2" target="_blank">有給休暇取得日数<img src="image/arrow_orange.webp" alt=""></a>から探す</p>
+                                        </div>
+                                   </div>
+                                   <div class="box__action"><span class="lastspurt2023-icon">アクションC</span><span class="txt">希望条件に合う企業を探そう</span></div>
+                                   <div class="box__frame">
+                                        <h5 class="head">おすすめの機会</h5>
+                                        <div class="column">
+                                             <img src="image/arrow_black.webp" alt="">
+                                             <p><a class="js-popIn" href="https://job.mynavi.jp/25/pc/search/query.html?RC:1,2,3,4,5,6,7,8,9,10,11,12,13,14,15/OP:16/&sch=L7Bxt" target="_blank">本年度の募集人数<img src="image/arrow_orange.webp" alt=""></a>から探す</p>
+                                        </div>
+                                        <div class="column">
+                                             <img src="image/arrow_black.webp" alt="">
+                                             <p><a class="js-popIn" href="https://job.mynavi.jp/25/pc/search/query.html?FS:1240,1260,1300,1310/OP:16/&sch=Wduo4" target="_blank">選考の特徴<img src="image/arrow_orange.webp" alt=""></a>から探す</p>
+                                        </div>
+                                   </div>
+                              </div>
+                              <div class="link js-popIn"><a href="https://job.mynavi.jp/conts/2025/schedule/" target="_blank"><span>3月企業エントリー開始までの</span><span>スケジュールも確認しておこう</span></a></div>
+                         </div>
+                    </div>
+               </div>
+               <div class="swiper-btn-wrapper js-slide-controls-follow">
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+               </div>
+          </div>
+     </section>
+<!-- コンテンツ要素を自由記述 end -->
+<!-- ▲／コンテンツ本文ここから end -->
+<?php print $html_fb; ?>
+<?php if($browser != 'sp'){ ?>
+	<p class="btn-top-01"><a href="#top">ページTOPへ</a></p>
+<?php } ?>
+	</div>
+			
+
+<!--フッターの出し分け -->
+<?php if($browser == 'sp'){ ?>
+	<?php print $html_social_link_sp; ?>
+	<?php print $html_footer_sp;?>
+<?php }else{ ?>
+<?php print $html_footer;?>
+<?php } ?>
+
+<script>	
+gtag('event', 'pageload_yoyakulist', { 'page_content': '予約リストLP' });	
+</script>
+</body>
+</html>
+
